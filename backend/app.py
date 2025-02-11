@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "https://music-player-project-coral.vercel.app"}})
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:hFsMLKrkCudSHhjgiZuOIQWjiPkjGQZK@autorack.proxy.rlwy.net:41982/railway'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:hFsMLKrkCudSHhjgiZuOIQWjiPkjGQZK@postgres.railway.internal:5432/railway'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
