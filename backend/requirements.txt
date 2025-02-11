@@ -74,7 +74,7 @@ msgpack==1.1.0
 mss==9.0.1
 multidict==6.0.5
 namex==0.0.8
-networkx==3.4.2
+networkx
 numpy==1.26.4
 openai==1.54.4
 opencv-python==4.10.0.84
