@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+@font-face {
+  font-family: 'Misto';
+  src: url('../public/fonts/Misto.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}

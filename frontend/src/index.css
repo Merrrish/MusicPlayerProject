@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Allright';
+  src: url('./assets/fonts/allright.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}
+
+@font-face {
+  font-family: 'Barley';
+  src: url('./assets/fonts/Barley.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}
+
+@font-face {
+  font-family: 'Crimson';
+  src: url('./assets/fonts/Crimson.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}
+
+@font-face {
+  font-family: 'Misto';
+  src: url('./assets/fonts/Misto.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}
+
+@font-face {
+  font-family: 'CrimsonB';
+  src: url('./assets/fonts/CrimsonBold.ttf') format('truetype'); /* Используйте правильный формат */
+  font-weight: bold; /* Укажите вес шрифта (например, normal, bold) */
+  font-style: normal; /* Укажите стиль (например, normal, italic) */
+}
