@@ -11,13 +11,19 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch("musicplayerproject-production-4db2.up.railway.app")
-      .then((response) => response.json())
+    fetch("https://musicplayerproject-production-4db2.up.railway.app/api/songs")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Сервер вернул ошибку: " + response.status);
+        }
+        return response.json();
+      })
       .then((data) => {
         setSongs(data);
       })
       .catch((error) => console.error("Ошибка при загрузке песен:", error));
   }, []);
+  
 
   const handlePrev = () => {
     if (currentIndex > 0) {

@@ -2,6 +2,7 @@
   "name": "music-player",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://musicplayerproject-production-4db2.up.railway.app",
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "cra-template": "1.2.0",

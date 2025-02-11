@@ -5,17 +5,19 @@ const CardList = () => {
   const [loading, setLoading] = useState(true); // Состояние загрузки
 
   useEffect(() => {
-    fetch('musicplayerproject-production-4db2.up.railway.app/api/songs') // GET-запрос к серверу
-      .then((response) => response.json())
+    fetch("https://musicplayerproject-production-4db2.up.railway.app/api/songs")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Сервер вернул ошибку: " + response.status);
+        }
+        return response.json();
+      })
       .then((data) => {
         setSongs(data);
-        setLoading(false); // Загрузка завершена
       })
-      .catch((error) => {
-        console.error('Ошибка загрузки песен:', error);
-        setLoading(false); // Завершаем загрузку даже при ошибке
-      });
+      .catch((error) => console.error("Ошибка при загрузке песен:", error));
   }, []);
+  
 
   if (loading) {
     return <div>Loading...</div>; // Можно заменить на компонент загрузки
