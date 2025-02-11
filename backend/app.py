@@ -4,7 +4,7 @@ from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})  # Разрешаем доступ с любого источника
 
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///songs.db'
