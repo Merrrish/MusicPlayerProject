@@ -10,6 +10,7 @@ class Song(db.Model):
     imageUrl = db.Column(db.String(500))
     audioUrl = db.Column(db.String(500))
     duration = db.Column(db.String(10))
+    lyrics = db.Column(db.Text, nullable=True)  # Это поле должно быть здесь!
     lyricsWithTiming = db.Column(db.Text)  # Убедитесь, что это есть
 
     def __repr__(self):
