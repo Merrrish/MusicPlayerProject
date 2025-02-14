@@ -11,7 +11,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch("music-player-production-f92d.up.railway.app")
+    fetch("https://music-player-production-f92d.up.railway.app/api/songs")
       .then((response) => response.json())
       .then((data) => {
         setSongs(data);
