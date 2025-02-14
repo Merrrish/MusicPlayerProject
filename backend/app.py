@@ -6,7 +6,6 @@ import json
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "https://music-player-project-coral.vercel.app"}})
 
-# Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./data/songs.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
@@ -23,7 +22,7 @@ def get_songs():
             'imageUrl': song.imageUrl,
             'audioUrl': song.audioUrl,
             'duration': song.duration,
-            'lyricsWithTiming': json.loads(song.lyricsWithTiming) if song.lyricsWithTiming else []  # Safely handling missing field
+            'lyricsWithTiming': json.loads(song.lyricsWithTiming) if song.lyricsWithTiming else []
         }
         songs_data.append(song_data)
     return jsonify(songs_data)
@@ -49,7 +48,7 @@ def add_song():
         audioUrl=audioUrl,
         duration=duration,
         lyrics=lyrics,
-        lyricsWithTiming=lyricsWithTiming  # Add this field too
+        lyricsWithTiming=lyricsWithTiming
     )
 
     try:

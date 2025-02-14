@@ -18,35 +18,35 @@ code {
 
 @font-face {
   font-family: 'Allright';
-  src: url('./assets/fonts/allright.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('./assets/fonts/allright.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Barley';
-  src: url('./assets/fonts/Barley.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('./assets/fonts/Barley.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Crimson';
-  src: url('./assets/fonts/Crimson.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('./assets/fonts/Crimson.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Misto';
-  src: url('./assets/fonts/Misto.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('./assets/fonts/Misto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'CrimsonB';
-  src: url('./assets/fonts/CrimsonBold.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: bold; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('./assets/fonts/CrimsonBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }

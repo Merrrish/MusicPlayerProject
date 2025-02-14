@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react';
 
 const CardList = () => {
   const [songs, setSongs] = useState([]);
-  const [loading, setLoading] = useState(true); // Состояние загрузки
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://music-player-production-f92d.up.railway.app/api/songs") // GET-запрос к серверу
+    fetch("https://music-player-production-f92d.up.railway.app/api/songs")
       .then((response) => response.json())
       .then((data) => {
         setSongs(data);
-        setLoading(false); // Загрузка завершена
+        setLoading(false);
       })
       .catch((error) => {
         console.error('Ошибка загрузки песен:', error);
-        setLoading(false); // Завершаем загрузку даже при ошибке
+        setLoading(false);
       });
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Можно заменить на компонент загрузки
+    return <div>Loading...</div>;
   }
 
   return (

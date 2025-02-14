@@ -17,7 +17,7 @@ button:hover {
 
 @font-face {
   font-family: 'Misto';
-  src: url('../public/fonts/Misto.ttf') format('truetype'); /* Используйте правильный формат */
-  font-weight: normal; /* Укажите вес шрифта (например, normal, bold) */
-  font-style: normal; /* Укажите стиль (например, normal, italic) */
+  src: url('../public/fonts/Misto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

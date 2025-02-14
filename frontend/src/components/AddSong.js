@@ -11,13 +11,11 @@ const AddSong = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // Обработчик изменений в инпутах формы
   const handleChange = (e) => {
     const { name, value } = e.target;
     
-    // Валидация для поля длительности
     if (name === 'duration' && !/^\d{1,2}:\d{2}$/.test(value) && value !== '') {
-      return;  // Не обновляем значение, если формат длительности неправильный
+      return;
     }
 
     setSong({
@@ -30,7 +28,6 @@ const AddSong = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Отправка POST-запроса на сервер
     fetch('http://localhost:5001/api/songs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

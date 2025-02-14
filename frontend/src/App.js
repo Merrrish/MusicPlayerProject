@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub } from 'react-icons/fa';  // Importing the GitHub icon from React Icons
+import { FaGithub } from 'react-icons/fa';
 import Card from "./components/Card";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
   const handlePlay = (audioUrl) => {
     if (audioUrl !== currentSong) {
       setCurrentSong(audioUrl);
-      setCurrentTime(0); // Сбрасываем таймер для новой песни
+      setCurrentTime(0);
     }
   };
 
@@ -54,7 +54,7 @@ function App() {
       return "";
     }
 
-    // Найти последнюю строку лирики, которая соответствует текущему времени
+    
     const currentLine = playingSong.lyricsWithTiming.find(
       (line, index, array) =>
         line.time <= currentTime &&
@@ -66,15 +66,15 @@ function App() {
 
   return (
     <div className="flex flex-col items-center bg-cbg text-white p-6 sm:p-8 min-h-screen">
-      {/* Добавление значка GitHub, теперь над заголовком */}
-      <div className="flex justify-center mb-3"> {/* Уменьшаем отступ между иконкой и заголовком */}
+
+      <div className="flex justify-center mb-3">
         <a
-          href="https://github.com/your-username" // Замените на ваш GitHub URL
+          href="hhttps://github.com/Merrrish/MusicPlayerProject"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-prpl transition duration-300"
         >
-          <FaGithub className="h-8 w-8" /> {/* Увеличиваем размер иконки */}
+          <FaGithub className="h-8 w-8" />
         </a>
       </div>
 
@@ -90,9 +90,9 @@ function App() {
         </motion.h1>
         <motion.p
           className="font-customB text-card bg-prpl px-3 py-1.5 w-24 sm:w-32 mx-auto"
-          initial={{ opacity: 0, y: 20 }} // Начинает немного ниже
-          animate={{ opacity: 1, y: 0 }} // Поднимается на своё место
-          transition={{ duration: 0.4, delay: 0.2 }} // Анимация появления
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         >
           in the World
         </motion.p>
@@ -106,7 +106,7 @@ function App() {
             currentIndex === 0 ? "bg-gray-500 cursor-not-allowed" : "bg-prpl hover:bg-prpld"
           }`}
           disabled={currentIndex === 0}
-          style={{ width: "50px", height: "50px" }} // Круглая кнопка
+          style={{ width: "50px", height: "50px" }}
         >
           ◀
         </button>
@@ -142,7 +142,7 @@ function App() {
                     volume={volume}
                     isActive={song.audioUrl === currentSong}
                     handlePlay={() => handlePlay(song.audioUrl)}
-                    onTimeUpdate={handleTimeUpdate} // Передаем callback
+                    onTimeUpdate={handleTimeUpdate}
                   />
                 </div>
               );
@@ -155,14 +155,13 @@ function App() {
             currentIndex === songs.length - 1 ? "bg-gray-500 cursor-not-allowed" : "bg-prpl hover:bg-prpld"
           }`}
           disabled={currentIndex === songs.length - 1}
-          style={{ width: "50px", height: "50px" }} // Круглая кнопка
+          style={{ width: "50px", height: "50px" }}
         >
           ▶
         </button>
       </div>
 
-      {/* Текст внизу экрана */}
-      <div className="mt-4 sm:mt-8 text-center w-64 sm:w-80"> {/* Уменьшаем отступы для уменьшения расстояния */}
+      <div className="mt-4 sm:mt-8 text-center w-64 sm:w-80">
         <motion.div
           key={songs[currentIndex]?.title}
           className="font-customCB text-white text-xl sm:text-2xl font-bold"
@@ -185,7 +184,7 @@ function App() {
           {songs[currentIndex]?.artist || ""}
         </motion.div>
 
-        <div className="mt-2 relative w-64 sm:w-80"> {/* Уменьшаем отступ между ползунком и текстами */}
+        <div className="mt-2 relative w-64 sm:w-80">
           <input
             type="range"
             min="0"
@@ -199,7 +198,7 @@ function App() {
           />
           <div className="font-customB text-medium text-gray-400 mt-1">{volume}%</div>
 
-          {/* Стили для ползунка */}
+          
           <style jsx>{`
             input[type="range"]::-webkit-slider-thumb {
               -webkit-appearance: none;
@@ -223,10 +222,10 @@ function App() {
           `}</style>
         </div>
 
-        {/* Отображение текущей строки текста песни */}
-        <div className="lyrics-container mt-3 sm:mt-4 text-center"> {/* Уменьшаем отступ между ползунком и текстом */}
+      
+        <div className="lyrics-container mt-3 sm:mt-4 text-center"> 
           <motion.div
-            key={getLyricsForCurrentTime()} // Обновляем ключ для анимации
+            key={getLyricsForCurrentTime()}
             className="font-customB text-white text-xl sm:text-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
