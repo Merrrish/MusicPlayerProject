@@ -5,7 +5,7 @@ const CardList = () => {
   const [loading, setLoading] = useState(true); // Состояние загрузки
 
   useEffect(() => {
-    fetch('https://music-player-production-f92d.up.railway.app/api/songs') // GET-запрос к серверу
+    fetch("https://music-player-production-f92d.up.railway.app/api/songs") // GET-запрос к серверу
       .then((response) => response.json())
       .then((data) => {
         setSongs(data);
